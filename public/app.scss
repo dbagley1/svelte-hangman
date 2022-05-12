@@ -1,0 +1,157 @@
+.hint-container {
+  border: 1px solid #1af;
+  // text-align: center;
+  padding: 10px;
+}
+
+.show-hint-check {
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #1af;
+  transition: all 0.3s;
+
+  & input {
+    display: none;
+  }
+}
+
+.hint {
+  font-size: 1.2rem;
+  line-height: 1.7em;
+  width: 100%;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  width: calc(100% / 4 - 1rem);
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+
+  &.active {
+    border: 3px solid #1af;
+  }
+}
+
+.life {
+  color: red;
+
+  &.lost {
+    color: #aaa;
+  }
+}
+
+.guesses-remaining {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.guess-word-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.letter-container,
+.guess-container,
+.hint-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.guess-letter-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 0;
+  margin: 5px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  aspect-ratio: 1;
+  max-width: 60px;
+
+  &.last {
+    border: solid 2px #1af;
+    color: #1af;
+  }
+
+  &.space {
+    border: none;
+  }
+}
+
+.letter-button-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 0;
+  margin: 3px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #fafafa;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  max-width: 50px;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+
+  &.correct {
+    color: #fff;
+    border: none;
+    background-color: #1af;
+  }
+}
+
+.guess-letter {
+  font-size: 3rem;
+  line-height: 1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.letter-button {
+  font-size: 1.5rem;
+  line-height: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  min-height: 100%;
+  padding: 1em;
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #ff3e00;
+  font-size: 3em;
+  font-weight: 100;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  main {
+    max-width: 600px;
+  }
+}
