@@ -128,5 +128,5 @@
 <svelte:window on:keydown={handleKeydown} />
 
 <style lang="scss">
-  @import "../public/app.scss";
+  @import "../docs/app.scss";
 </style>
