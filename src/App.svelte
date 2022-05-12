@@ -105,6 +105,7 @@
         <button
           class="letter-button-wrap"
           class:correct={(lastGuess === letter || gameOver) && answerArray.includes(letter)}
+          class:incorrect={(lastGuess === letter || gameOver) && guesses.includes(letter) && !answerArray.includes(letter)}
           disabled={guesses.includes(letter) || gameOver}
           on:click={() => guessLetter(letter)}
         >

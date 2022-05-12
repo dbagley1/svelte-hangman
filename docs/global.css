@@ -1,3 +1,12 @@
+:root {
+	--g-green: #34a852;
+	--g-yellow: #ffe629;
+	--g-orange: #feb200;
+	--g-paleblue: #e4f0ff;
+	--g-blue: #4285f4;
+	--g-red: #ea4335;
+}
+
 html,
 body {
 	position: relative;
