@@ -42,7 +42,13 @@
   };
 
   function handleKeydown(event) {
-    if (event.keyCode >= 65 && event.keyCode <= 90) {
+    if (event.metakey || event.ctrlKey || event.altKey) {
+      return;
+    } else if (gameOver) {
+      if (event.key === "Enter" || event.key === "Space") {
+        restartGame();
+      }
+    } else if (event.keyCode >= 65 && event.keyCode <= 90) {
       const letter = event.key.toLowerCase();
       const index = letters.indexOf(letter);
       if (index > -1) {
